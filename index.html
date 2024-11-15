@@ -1,232 +1,750 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Project Title</title>
+        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project Title</title>
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+        <script
+            type="module"
+            src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
-  <script type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+        <link rel="stylesheet" href="./index.css" />
 
-  <link rel="stylesheet" href="./index.css">
+        <link
+            rel="stylesheet"
+            href="./components/team-member/team-member.css" />
+        <script
+            type="module"
+            src="./components/team-member/team-member.js"></script>
 
-  <link rel="stylesheet" href="./components/team-member/team-member.css">
-  <script type="module" src="./components/team-member/team-member.js"></script>
+        <link
+            rel="stylesheet"
+            href="./components/table-of-content/table-of-content.css" />
 
-  <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
+        <script
+            type="module"
+            src="./components/image/image-component.js"></script>
 
-  <script type="module" src="./components/image/image-component.js"></script>
+        <script type="module" src="./components/video/video.js"></script>
 
-  <script type="module" src="./components/video/video.js"></script>
+        <link rel="stylesheet" href="./components/references/references.css" />
 
-  <link rel="stylesheet" href="./components/references/references.css">
+        <link
+            rel="stylesheet"
+            href="./components/scroll-to-top/scroll-to-top.css" />
+        <script src="./components/scroll-to-top/scroll-to-top.js"></script>
 
-  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
-  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+        <script src="./components/table-component/table-component.js"></script>
 
-  <script src="./components/table-component/table-component.js"></script>
+        <link
+            href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+            rel="stylesheet" />
+    </head>
 
-  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
-</head>
+    <body>
+        <div class="content">
+            <image-component
+                tag="image"
+                source="assets/nus-logo.png"
+                subtitle=""></image-component>
+            <h2 style="text-align: center">
+                IS-409: Innovative Design for Composite Tooling
+            </h2>
+            <h3 style="text-align: center">Chun Jiyun</h3>
+            <h3 style="text-align: center">
+                CDE4301 Innovation & Design Capstone
+            </h3>
+            <h3 style="text-align: center">AY2024/2025 Semester 1</h3>
 
-<body>
-  <div class="content">
-    <h1>Project Title</h1>
-
-    <!-- This is the team member component use to display details about your team members -->
+            <!-- This is the team member component use to display details about your team members
     <div class="team-member-wrapper">
       <team-member avatar="assets/blackranger.png" name="Black" department="Mechanical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/yellowranger.png" name="Yellow" department="Computer Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/redranger.png" name="Red" department="Electrical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/pinkranger.png" name="Pink" department="Biomedical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/blueranger.png" name="Blue" department="Chemical Engineering"
-        year="1993"></team-member>
-    </div>
+        year="2024"></team-member>
+    </div> -->
 
-    <!-- This is a divide from the shoelace library for aesthetic purpose -->
-    <sl-divider></sl-divider>
+            <!-- This is a divide from the shoelace library for aesthetic purpose -->
+            <sl-divider></sl-divider>
 
-    <!-- This is the table-of-content component use to define all of the link directly to each section -->
-    <div class="table-of-content">
-      <h2>Table of Contents</h2>
-      <sl-tree>
-        <sl-tree-item expanded>
-          <a href="#section-header-1">1. Section Header 1</a>
-          <sl-tree-item>
-            <a href="#sub-section-1-header-1">1.1. Sub-section Header 1</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-1-header-2">1.2. Sub-section Header 2</a>
-          </sl-tree-item>
-        </sl-tree-item>
+            <!-- This is the table-of-content component use to define all of the link directly to each section -->
+            <div class="table-of-content">
+                <h2>Table of Contents</h2>
+                <sl-tree>
+                    <sl-tree-item expanded>
+                        <a href="#section-header-1">1. Introduction</a>
+                        <sl-tree-item>
+                            <a href="#sub-section-1-header-1"
+                                >1.1. Composite Materials</a
+                            >
+                        </sl-tree-item>
+                        <sl-tree-item>
+                            <a href="#sub-section-1-header-2"
+                                >1.2. Comparison Between Industry and In-House
+                                Composite Manufacturing Method</a
+                            >
+                        </sl-tree-item>
+                        <sl-tree-item>
+                            <a href="#sub-section-1-header-1"
+                                >1.3. Three Major Methods for In-House Carbon
+                                Fiber Lay-Up</a
+                            >
+                        </sl-tree-item>
+                    </sl-tree-item>
 
-        <sl-tree-item expanded>
-          <a href="#section-header-2">2. Section Header 1</a>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-1">2.1. Sub-section Header 1</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-2">2.2. Sub-section Header 2</a>
-          </sl-tree-item>
-        </sl-tree-item>
+                    <sl-tree-item>
+                        <a href="#section-header-2"
+                            >2. Pre-Preg Processing Method</a
+                        >
+                    </sl-tree-item>
 
-        <sl-tree-item>
-          <a href="#references">References</a>
-        </sl-tree-item>
-      </sl-tree>
-    </div>
-    <sl-divider></sl-divider>
+                    <sl-tree-item>
+                        <a href="#section-header-3"
+                            >3. Challenges in Vacuum Bagging</a
+                        >
+                    </sl-tree-item>
 
-    <div>
+                    <sl-tree-item>
+                        <a href="#section-header-4">4. Design Statement</a>
+                    </sl-tree-item>
 
-      <!-- This is an example of what a section might look like -->
-      <div id="section-header-1">
-        <h2> 1. Section Header 1 </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna
-          aliqua. Tincidunt ornare massa eget egestas. At tellus at urna condimentum mattis pellentesque id nibh tortor.
-          Elementum sagittis vitae et leo duis ut diam. Morbi tristique senectus et netus et malesuada fames.
-          Suspendisse
-          ultrices gravida dictum fusce ut placerat orci. Risus nullam eget felis eget nunc lobortis mattis aliquam
-          faucibus
-          (Brody, 2007). Eget sit amet tellus cras adipiscing enim eu turpis egestas. Aliquet nibh praesent tristique
-          magna
-          sit amet purus. Adipiscing bibendum est ultricies integer quis auctor elit sed. Fermentum et sollicitudin ac
-          orci
-          phasellus egestas tellus rutrum. At in tellus integer feugiat scelerisque varius morbi enim nunc. Volutpat
-          blandit
-          aliquam etiam erat velit scelerisque in. Id diam maecenas ultricies mi eget mauris pharetra et. Nec dui nunc
-          mattis
-          enim ut tellus elementum sagittis vitae.
-        </p>
-      </div>
+                    <sl-tree-item>
+                        <a href="#section-header-5"
+                            >5. Design Specifications for Resuable Vacuum
+                            Bagging Material</a
+                        >
+                    </sl-tree-item>
 
-      <div id="sub-section-1-header-1">
-        <h3>1.1 Sub-section Header 1</h3>
-        <p>
-          Ultrices dui sapien eget mi. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Dolor purus non enim
-          praesent elementum facilisis. Lacus vestibulum sed arcu non odio euismod lacinia at. Metus aliquam eleifend mi
-          in nulla. Lacus sed viverra tellus in hac habitasse platea. Varius quam quisque id diam vel quam elementum
-          pulvinar. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Diam ut venenatis tellus in metus
-          vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Venenatis lectus magna
-          fringilla
-          urna. In nisl nisi scelerisque eu ultrices. Velit egestas dui id ornare arcu odio ut sem nulla. Quam id leo in
-          vitae. Egestas congue quisque egestas diam in arcu cursus euismod quis. Porttitor leo a diam sollicitudin
-          tempor
-          id eu nisl.
-        </p>
-      </div>
+                    <sl-tree-item>
+                        <a href="#section-header-6"
+                            >6. Sourcing of Silicon Sheet</a
+                        >
+                    </sl-tree-item>
 
-      <div id="sub-section-1-header-2">
-        <h3>1.2 Sub-section Header 2</h3>
-        <p>
-          Fermentum dui faucibus in ornare quam viverra orci. Donec ultrices tincidunt arcu non sodales. A diam maecenas
-          sed enim ut sem viverra. Semper viverra nam libero justo laoreet sit. Mi sit amet mauris commodo quis. Auctor
-          augue mauris augue neque gravida in fermentum et. Auctor elit sed vulputate mi sit amet. Maecenas pharetra
-          convallis posuere morbi leo urna. Sem nulla pharetra diam sit amet nisl. Id nibh tortor id aliquet lectus.
-          Nibh
-          nisl condimentum id venenatis a condimentum vitae sapien. Convallis posuere morbi leo urna molestie at
-          elementum.
-        </p>
+                    <sl-tree-item>
+                        <a href="#section-header-7"
+                            >7. Cost Benefit Analysis of the Purchased
+                            Silicon</a
+                        >
+                    </sl-tree-item>
 
-        <!-- This is an example of how you might use the image component -->
-        <image-component tag="image" source="assets/requirement.png"
-          subtitle="Image 1: iDP suggested pathway"></image-component>
-      </div>
-    </div>
+                    <sl-tree-item expanded>
+                        <a href="#section-header-8"
+                            >8. ASTM D412 Experiment with Silicone</a
+                        >
+                        <sl-tree-item>
+                            <a href="#sub-section-8-header-1"
+                                >8.1. Experiment Objective</a
+                            >
+                        </sl-tree-item>
+                        <sl-tree-item>
+                            <a href="#sub-section-8-header-2"
+                                >8.2. Experiment Hypothesis</a
+                            >
+                        </sl-tree-item>
+                        <sl-tree-item>
+                            <a href="#sub-section-8-header-3"
+                                >8.3. Experiment Preparation</a
+                            >
+                        </sl-tree-item>
+                        <sl-tree-item>
+                            <a href="#sub-section-8-header-4"
+                                >8.4. Experiment Procedure</a
+                            >
+                        </sl-tree-item>
+                        <sl-tree-item>
+                            <a href="#sub-section-8-header-5"
+                                >8.5. Experiement Results and Analysis</a
+                            >
+                        </sl-tree-item>
+                    </sl-tree-item>
 
+                    <sl-tree-item>
+                        <a href="#section-header-9">9. Future Work</a>
+                    </sl-tree-item>
 
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-      <div id="section-header-2">
-        <h2>2. Section Header 2</h2>
-        <p>
-          Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Mi proin sed libero enim sed faucibus turpis in
-          eu. Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar mattis nunc sed blandit libero. Lacus sed viverra
-          tellus in hac habitasse platea dictumst vestibulum. At augue eget arcu dictum varius duis. Mauris ultrices
-          eros in cursus turpis massa (Lindberg, 1967). Libero nunc consequat interdum varius sit amet mattis. Ut ornare
-          lectus sit amet est placerat in egestas erat. Elementum curabitur vitae nunc sed. Proin nibh nisl condimentum
-          id venenatis a condimentum vitae sapien (Chamberlin et al., 2008). Vitae tempus quam pellentesque nec nam
-          aliquam sem.
-        </p>
-      </div>
+                    <sl-tree-item>
+                        <a href="#references">References</a>
+                    </sl-tree-item>
+                </sl-tree>
+            </div>
+            <sl-divider></sl-divider>
 
-      <div id="sub-section-2-header-1">
-        <h3>2.1. Sub-section Header 1</h3>
-        <p>
-          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
-          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
-          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
-          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
-          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
-          fames ac. <a href="#image">Link to the image above</a>
-        </p>
+            <div>
+                <!-- This is an example of what a section might look like -->
+                <div id="section-header-1">
+                    <h2>1. Introduction</h2>
+                </div>
 
-        <!-- This is an example of how you might use the video component -->
-        <video-component tag="rick" source="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          subtitle="Video: Never gonna give you up?"></video-component>
-      </div>
+                <div id="sub-section-1-header-1">
+                    <h3>1.1 Composite Materials</h3>
+                    <p>
+                        Composite material is made from combining two or more
+                        constituent materials with distinct physical or chemical
+                        properties to create unique properties such as enhanced
+                        strength and reduced weight compared to the the original
+                        material alone. Generally, composite materials are the
+                        product of a fiber material and a matrix material. Fiber
+                        is the key to strength and stiffness and matrix material
+                        acts as a bonding agent, holding the fiber together and
+                        distributing loads across the composite. Common examples
+                        of composite materials include carbon fiber, glass fiber
+                        and aramid fiber.
+                    </p>
+                    <image-component
+                        tag="image"
+                        source="assets/composite-material.png"
+                        subtitle="Figure 1: Visual aid for explaining composite materials"></image-component>
+                </div>
 
-      <div id="sub-section-2-header-2">
-        <h3>2.2. Sub-section Header 2</h3>
-        <p>
-          Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Dignissim convallis aenean et tortor at
-          risus viverra adipiscing. Facilisi nullam vehicula ipsum a arcu cursus. Adipiscing elit pellentesque
-          habitant
-          morbi tristique senectus et netus. Turpis massa tincidunt dui ut ornare lectus. Suspendisse sed nisi lacus
-          sed. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Ut ornare lectus sit amet est
-          placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet.
-        </p>
+                <div id="sub-section-1-header-2">
+                    <h3>
+                        1.2 Comparison Between Industry and In-House Composite
+                        Manufacturing Method
+                    </h3>
+                    <p>
+                        Today, composite materials are not only prevalent in
+                        large-scale industries but are also produced in
+                        low-volume production and customized applications,
+                        referred to as in-house manufacturing. There are
+                        significant differences between industrial and in-house
+                        manufacturing methods for producing composite parts. In
+                        industrial contexts, composite manufacturing often
+                        involves highly advanced technologies like automated
+                        fiber placement as seen in Figure 2. This technique
+                        employs robotic arms to precisely place narrow (0.3–3
+                        cm) carbon fiber tapes onto a variety of surfaces,
+                        enabling the efficient creation of complex shapes and
+                        intricate corners with high precision.
+                    </p>
+                    <image-component
+                        tag="image"
+                        source="assets/fiber-placement-machine.png"
+                        subtitle="Figure 2: Automated fiber placement machine in industrial use"></image-component>
+                    <p>
+                        On the other hand, in-house composite manufacturing is
+                        often done in lower production volumes, various part
+                        sizes and catered to the consumer needs. Instead of
+                        advanced machinery like automated fiber placement,
+                        in-house methods typically use a hand lay-up process on
+                        molds. Today, NUS FSAE uses in-house composite
+                        manufacturing to produce essential parts for their
+                        racing car. This includes larger structures like the
+                        front wing which is 1.3m x 0.5m x 0.06m (Figure 3) as
+                        well as an electronics box which can be as small as 15cm
+                        x 15cm x 15cm. My project scope is on the in-house
+                        manufacturing method.
+                    </p>
+                    <image-component
+                        tag="image"
+                        source="assets/front-wing-fsae.png"
+                        subtitle="Figure 3: Front wing made out of carbon fiber by NUS FSAE"></image-component>
+                </div>
 
-        <!-- This is an example of how you might use the table component -->
-        <table-component subtitle="Table: Demo table">
-          <div id="table-1"></div>
-        </table-component>
-      </div>
-    </div>
+                <div id="sub-section-1-header-3">
+                    <h3>
+                        1.3 Three Major Methods for In-House Carbon Fiber Lay-Up
+                    </h3>
+                    <p>
+                        In in-house manufacturing, there are three major methods
+                        used for carbon fiber lay-up. The first method is the
+                        wet lay-up process as seen in Figure 4. This is done by
+                        manually applying resin to the layers of dry fiber
+                        reinforcement. This requires handling wet resin and
+                        ensuring that the resin is evenly distributed with the
+                        right amount.
+                    </p>
+                    <image-component
+                        tag="image"
+                        source="assets/wet-lay-up.png"
+                        subtitle="Figure 4: Wet lay-up"></image-component>
+                    <p>
+                        The second method is prepreg lay-up in Figure 5.
+                        Prepregs are carbon fiber sheets that are
+                        pre-impregnated with a partially cured resin system.
+                        Prepregs have a tacky texture and they can easily be cut
+                        to fit the mold it is the easiest to handle out of the
+                        three methods. Pre-pregs must be stored in refrigerated
+                        conditions to prevent full curing until the lay-up is
+                        completed.
+                    </p>
+                    <image-component
+                        tag="image"
+                        source="assets/prepreg-lay-up.png"
+                        subtitle="Figure 5: Prepreg lay-up"></image-component>
+                    <p>
+                        The third and last method is resin transfer molding in
+                        Figure 6. It uses a resin injection system to inject the
+                        resin into a closed mold containing dry fibers.
+                    </p>
+                    <image-component
+                        tag="image"
+                        source="assets/resin-transfer.png"
+                        subtitle="Figure 6: Resin transfer molding"></image-component>
+                    <p>
+                        While the three methods differ in the way resin is
+                        applied to the fiber, the procedures used to process
+                        these lay-ups are similar.
+                    </p>
+                </div>
+            </div>
 
-    <!-- This is an example of how you can use the references component to create references -->
-    <div id="references" class="references">
-      <sl-divider></sl-divider>
-      <h2>References</h2>
-      <ul>
-        <li>
-          Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved from
-          http://www.dowjones.com/factiva/
-        </li>
-        <li>
-          Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker well-being: Occupational
-          health psychologists convene to share their research on work, stress, and health. Monitor on Psychology,
-          39(5), 26-29.
-        </li>
-        <li>
-          Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied Psychology, 2(2),
-          38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
-        </li>
-      </ul>
-    </div>
-  </div>
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+            <div>
+                <div id="section-header-2">
+                    <h2>2. Pre-Preg Processing Method</h2>
+                    <p>
+                        This project uses prepreg due to its distinct advantages
+                        over other lay-up methods. Prepregs provide an excellent
+                        strength-to-weight ratio which is ideal for high
+                        performance applications where weight and mechanical
+                        properties are critical. For example, the front wing
+                        produced by NUS FSAE also uses prepregs for this reason.
+                        Additionally, prepregs offer consistent quality of
+                        composite parts because there is uniform fiber to resin
+                        ratio and consistent ply thickness. They are also easy
+                        to handle as it doesn’t require wet resins and this
+                        reduces the curing time since the resin system is
+                        already partially cured. To provide a clearer
+                        understanding of the prepreg processing method, the
+                        breakdown of the key steps involved is shown in Figure
+                        7.
+                    </p>
+                    <table-component
+                        subtitle="Figure 7: Breakdown of the prepreg processing steps">
+                        <div id="table-1"></div>
+                    </table-component>
+                    <p>
+                        To provide a clearer understanding of the vacuum bagging
+                        process for a prepreg layup which is the highlighted
+                        steps in Figure 7, Figure 8 illustrates a real-life
+                        example of a prepreg lay-up. In this assembly, prepreg
+                        lay-up is positioned between the vacuum bagging film and
+                        a flat plate at the base with the edges sealed using
+                        sealant tapes. Figure 9 shows a simplified diagram of
+                        this assembly.
+                    </p>
+                    <image-component
+                        tag="image"
+                        source="assets/vacuum-bagging.png"
+                        subtitle="Figure 8: Real-life example of vacuum bagging for a prepreg lay-up"></image-component>
+                    <p></p>
+                    <image-component
+                        tag="image"
+                        source="assets/simplified-prepreg.png"
+                        subtitle="Figure 9: Simplified diagram of a prepreg lay-up in a vacuum bag"></image-component>
+                </div>
+            </div>
 
-  <!-- This is the code to display the scroll to top button for ergonomic -->
-  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-  <!-- but it might reduce the user experience. -->
-  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
-    <sl-icon name="arrow-up" label="Settings"></sl-icon>
-  </sl-button>
+            <br />
+            <br />
+            <sl-divider></sl-divider>
 
-  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-  <script type="module" src="./components/table-component/table-component.js"></script>
-</body>
+            <div>
+                <div id="section-header-3">
+                    <h2>3. Challenges in Vacuum Bagging</h2>
+                    <p>
+                        Although the vacuum bagging process is essential for
+                        in-house composite manufacturing methods, it poses four
+                        major challenges related to skill dependency, time
+                        intensive, cost and environmental impact.
+                        <br />
+                        <br />
+                        The first challenge is that vacuum bagging is a highly
+                        skill-dependent process. During the vacuuming phase, the
+                        vacuum bag can easily form folds on the lay-up
+                        especially for deep corners and complex shapes. These
+                        folds are very critical as they can lead to inconsistent
+                        vacuum pressure, resulting in bridging, voids, or
+                        pinholes that can compromise the strength and quality of
+                        the final composite part. Therefore, proper pleating
+                        process is required when vacuuming the bag to ensure
+                        that it’s fully conformed to the mold including
+                        intricate corners. This increases the complexity of the
+                        process and increases the demand for skilled labor,
+                        making it a challenging method for less experienced
+                        technicians to perform.
+                        <br />
+                        <br />
+                        The second challenge is the time intensity of the
+                        process. Because there are several steps involved in the
+                        vacuum bagging process such as bagging, sealing and
+                        monitoring the conformity of the vacuum bag, this
+                        increases the overall production time. This reduces the
+                        productivity and efficiency of producing composite
+                        parts.
+                        <br />
+                        <br />
+                        The third challenge is the high cost of vacuum bagging
+                        materials. At NUS, for instance, each roll of vacuum
+                        bagging film purchased every year costs $1562 SGD while
+                        the sealant tape costs $5.47 SGD per roll. Figure 10
+                        shows the specifications of the materials purchased in
+                        NUS. Such expenses can add up quickly when the project
+                        scale increases hence reducing material costs could
+                        substantially lower production cost.
+                    </p>
 
+                    <table-component subtitle="Figure 10: Vacuum bagging film and sealant tape purchased by NUS">
+                        <div id="table-2"></div>
+                    </table-component>
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+
+            <div>
+                <div id="section-header-4">
+                    <h2>4. Design Statement</h2>
+                    <p>
+                        Ornare arcu dui vivamus arcu felis bibendum ut tristique
+                        et. Mi proin sed libero enim sed faucibus turpis in eu.
+                        Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar
+                        mattis nunc sed blandit libero. Lacus sed viverra tellus
+                        in hac habitasse platea dictumst vestibulum. At augue
+                        eget arcu dictum varius duis. Mauris ultrices eros in
+                        cursus turpis massa (Lindberg, 1967). Libero nunc
+                        consequat interdum varius sit amet mattis. Ut ornare
+                        lectus sit amet est placerat in egestas erat. Elementum
+                        curabitur vitae nunc sed. Proin nibh nisl condimentum id
+                        venenatis a condimentum vitae sapien (Chamberlin et al.,
+                        2008). Vitae tempus quam pellentesque nec nam aliquam
+                        sem.
+                    </p>
+
+                    <table-component subtitle="Table: Demo table">
+                        <div id="table-1"></div>
+                    </table-component>
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+
+            <div>
+                <div id="section-header-3">
+                    <h2>3. Challenges in Vacuum Bagging</h2>
+                    <p>
+                        Ornare arcu dui vivamus arcu felis bibendum ut tristique
+                        et. Mi proin sed libero enim sed faucibus turpis in eu.
+                        Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar
+                        mattis nunc sed blandit libero. Lacus sed viverra tellus
+                        in hac habitasse platea dictumst vestibulum. At augue
+                        eget arcu dictum varius duis. Mauris ultrices eros in
+                        cursus turpis massa (Lindberg, 1967). Libero nunc
+                        consequat interdum varius sit amet mattis. Ut ornare
+                        lectus sit amet est placerat in egestas erat. Elementum
+                        curabitur vitae nunc sed. Proin nibh nisl condimentum id
+                        venenatis a condimentum vitae sapien (Chamberlin et al.,
+                        2008). Vitae tempus quam pellentesque nec nam aliquam
+                        sem.
+                    </p>
+
+                    <table-component subtitle="Table: Demo table">
+                        <div id="table-1"></div>
+                    </table-component>
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+
+            <div>
+                <div id="section-header-4">
+                    <h2>4. Design Statement</h2>
+                    <p>
+                        Ornare arcu dui vivamus arcu felis bibendum ut tristique
+                        et. Mi proin sed libero enim sed faucibus turpis in eu.
+                        Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar
+                        mattis nunc sed blandit libero. Lacus sed viverra tellus
+                        in hac habitasse platea dictumst vestibulum. At augue
+                        eget arcu dictum varius duis. Mauris ultrices eros in
+                        cursus turpis massa (Lindberg, 1967). Libero nunc
+                        consequat interdum varius sit amet mattis. Ut ornare
+                        lectus sit amet est placerat in egestas erat. Elementum
+                        curabitur vitae nunc sed. Proin nibh nisl condimentum id
+                        venenatis a condimentum vitae sapien (Chamberlin et al.,
+                        2008). Vitae tempus quam pellentesque nec nam aliquam
+                        sem.
+                    </p>
+
+                    <table-component subtitle="Table: Demo table">
+                        <div id="table-1"></div>
+                    </table-component>
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+
+            <div>
+                <div id="section-header-5">
+                    <h2>
+                        5. Design Specifications for Reusable Vacuum Bagging
+                        Material
+                    </h2>
+                    <p>
+                        Ornare arcu dui vivamus arcu felis bibendum ut tristique
+                        et. Mi proin sed libero enim sed faucibus turpis in eu.
+                        Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar
+                        mattis nunc sed blandit libero. Lacus sed viverra tellus
+                        in hac habitasse platea dictumst vestibulum. At augue
+                        eget arcu dictum varius duis. Mauris ultrices eros in
+                        cursus turpis massa (Lindberg, 1967). Libero nunc
+                        consequat interdum varius sit amet mattis. Ut ornare
+                        lectus sit amet est placerat in egestas erat. Elementum
+                        curabitur vitae nunc sed. Proin nibh nisl condimentum id
+                        venenatis a condimentum vitae sapien (Chamberlin et al.,
+                        2008). Vitae tempus quam pellentesque nec nam aliquam
+                        sem.
+                    </p>
+
+                    <table-component subtitle="Table: Demo table">
+                        <div id="table-1"></div>
+                    </table-component>
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+
+            <div>
+                <div id="section-header-6">
+                    <h2>6. Sourcing of Silicone Sheet</h2>
+                    <p>
+                        Ornare arcu dui vivamus arcu felis bibendum ut tristique
+                        et. Mi proin sed libero enim sed faucibus turpis in eu.
+                        Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar
+                        mattis nunc sed blandit libero. Lacus sed viverra tellus
+                        in hac habitasse platea dictumst vestibulum. At augue
+                        eget arcu dictum varius duis. Mauris ultrices eros in
+                        cursus turpis massa (Lindberg, 1967). Libero nunc
+                        consequat interdum varius sit amet mattis. Ut ornare
+                        lectus sit amet est placerat in egestas erat. Elementum
+                        curabitur vitae nunc sed. Proin nibh nisl condimentum id
+                        venenatis a condimentum vitae sapien (Chamberlin et al.,
+                        2008). Vitae tempus quam pellentesque nec nam aliquam
+                        sem.
+                    </p>
+
+                    <table-component subtitle="Table: Demo table">
+                        <div id="table-1"></div>
+                    </table-component>
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+
+            <div>
+                <div id="section-header-7">
+                    <h2>7. Cost Benefit Analysis of the Purchased Silicone</h2>
+                    <p>
+                        Ornare arcu dui vivamus arcu felis bibendum ut tristique
+                        et. Mi proin sed libero enim sed faucibus turpis in eu.
+                        Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar
+                        mattis nunc sed blandit libero. Lacus sed viverra tellus
+                        in hac habitasse platea dictumst vestibulum. At augue
+                        eget arcu dictum varius duis. Mauris ultrices eros in
+                        cursus turpis massa (Lindberg, 1967). Libero nunc
+                        consequat interdum varius sit amet mattis. Ut ornare
+                        lectus sit amet est placerat in egestas erat. Elementum
+                        curabitur vitae nunc sed. Proin nibh nisl condimentum id
+                        venenatis a condimentum vitae sapien (Chamberlin et al.,
+                        2008). Vitae tempus quam pellentesque nec nam aliquam
+                        sem.
+                    </p>
+
+                    <table-component subtitle="Table: Demo table">
+                        <div id="table-1"></div>
+                    </table-component>
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <sl-divider></sl-divider>
+
+            <div id="section-header-8">
+                <h2>8. ASTM D412 Experiment with Silicone</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Tincidunt ornare massa eget egestas. At tellus at
+                    urna condimentum mattis pellentesque id nibh tortor.
+                    Elementum sagittis vitae et leo duis ut diam. Morbi
+                    tristique senectus et netus et malesuada fames. Suspendisse
+                    ultrices gravida dictum fusce ut placerat orci. Risus nullam
+                    eget felis eget nunc lobortis mattis aliquam faucibus
+                    (Brody, 2007). Eget sit amet tellus cras adipiscing enim eu
+                    turpis egestas. Aliquet nibh praesent tristique magna sit
+                    amet purus. Adipiscing bibendum est ultricies integer quis
+                    auctor elit sed. Fermentum et sollicitudin ac orci phasellus
+                    egestas tellus rutrum. At in tellus integer feugiat
+                    scelerisque varius morbi enim nunc. Volutpat blandit aliquam
+                    etiam erat velit scelerisque in. Id diam maecenas ultricies
+                    mi eget mauris pharetra et. Nec dui nunc mattis enim ut
+                    tellus elementum sagittis vitae.
+                </p>
+            </div>
+
+            <div id="sub-section-8-header-1">
+                <h3>8.1. Experiment Objective</h3>
+                <p>
+                    Ultrices dui sapien eget mi. Nunc mi ipsum faucibus vitae
+                    aliquet nec ullamcorper sit. Dolor purus non enim praesent
+                    elementum facilisis. Lacus vestibulum sed arcu non odio
+                    euismod lacinia at. Metus aliquam eleifend mi in nulla.
+                    Lacus sed viverra tellus in hac habitasse platea. Varius
+                    quam quisque id diam vel quam elementum pulvinar. Eleifend
+                    quam adipiscing vitae proin sagittis nisl rhoncus. Diam ut
+                    venenatis tellus in metus vulputate. Lorem ipsum dolor sit
+                    amet consectetur adipiscing elit pellentesque. Venenatis
+                    lectus magna fringilla urna. In nisl nisi scelerisque eu
+                    ultrices. Velit egestas dui id ornare arcu odio ut sem
+                    nulla. Quam id leo in vitae. Egestas congue quisque egestas
+                    diam in arcu cursus euismod quis. Porttitor leo a diam
+                    sollicitudin tempor id eu nisl.
+                </p>
+            </div>
+
+            <div id="sub-section-8-header-2">
+                <h3>8.2. Experiment Hypothesis</h3>
+                <p>
+                    Fermentum dui faucibus in ornare quam viverra orci. Donec
+                    ultrices tincidunt arcu non sodales. A diam maecenas sed
+                    enim ut sem viverra. Semper viverra nam libero justo laoreet
+                    sit. Mi sit amet mauris commodo quis. Auctor augue mauris
+                    augue neque gravida in fermentum et. Auctor elit sed
+                    vulputate mi sit amet. Maecenas pharetra convallis posuere
+                    morbi leo urna. Sem nulla pharetra diam sit amet nisl. Id
+                    nibh tortor id aliquet lectus. Nibh nisl condimentum id
+                    venenatis a condimentum vitae sapien. Convallis posuere
+                    morbi leo urna molestie at elementum.
+                </p>
+
+                <!-- This is an example of how you might use the image component -->
+                <image-component
+                    tag="image"
+                    source="assets/requirement.png"
+                    subtitle="Image 1: iDP suggested pathway"></image-component>
+            </div>
+
+            <div id="sub-section-8-header-3">
+                <h3>8.3. Experiment Preparation</h3>
+                <p>
+                    Ultrices dui sapien eget mi. Nunc mi ipsum faucibus vitae
+                    aliquet nec ullamcorper sit. Dolor purus non enim praesent
+                    elementum facilisis. Lacus vestibulum sed arcu non odio
+                    euismod lacinia at. Metus aliquam eleifend mi in nulla.
+                    Lacus sed viverra tellus in hac habitasse platea. Varius
+                    quam quisque id diam vel quam elementum pulvinar. Eleifend
+                    quam adipiscing vitae proin sagittis nisl rhoncus. Diam ut
+                    venenatis tellus in metus vulputate. Lorem ipsum dolor sit
+                    amet consectetur adipiscing elit pellentesque. Venenatis
+                    lectus magna fringilla urna. In nisl nisi scelerisque eu
+                    ultrices. Velit egestas dui id ornare arcu odio ut sem
+                    nulla. Quam id leo in vitae. Egestas congue quisque egestas
+                    diam in arcu cursus euismod quis. Porttitor leo a diam
+                    sollicitudin tempor id eu nisl.
+                </p>
+            </div>
+
+            <div id="sub-section-8-header-4">
+                <h3>8.4. Experiment Procedure</h3>
+                <p>
+                    Ultrices dui sapien eget mi. Nunc mi ipsum faucibus vitae
+                    aliquet nec ullamcorper sit. Dolor purus non enim praesent
+                    elementum facilisis. Lacus vestibulum sed arcu non odio
+                    euismod lacinia at. Metus aliquam eleifend mi in nulla.
+                    Lacus sed viverra tellus in hac habitasse platea. Varius
+                    quam quisque id diam vel quam elementum pulvinar. Eleifend
+                    quam adipiscing vitae proin sagittis nisl rhoncus. Diam ut
+                    venenatis tellus in metus vulputate. Lorem ipsum dolor sit
+                    amet consectetur adipiscing elit pellentesque. Venenatis
+                    lectus magna fringilla urna. In nisl nisi scelerisque eu
+                    ultrices. Velit egestas dui id ornare arcu odio ut sem
+                    nulla. Quam id leo in vitae. Egestas congue quisque egestas
+                    diam in arcu cursus euismod quis. Porttitor leo a diam
+                    sollicitudin tempor id eu nisl.
+                </p>
+            </div>
+
+            <div id="sub-section-8-header-5">
+                <h3>8.5. Experiment Results and Analysis</h3>
+                <p>
+                    Ultrices dui sapien eget mi. Nunc mi ipsum faucibus vitae
+                    aliquet nec ullamcorper sit. Dolor purus non enim praesent
+                    elementum facilisis. Lacus vestibulum sed arcu non odio
+                    euismod lacinia at. Metus aliquam eleifend mi in nulla.
+                    Lacus sed viverra tellus in hac habitasse platea. Varius
+                    quam quisque id diam vel quam elementum pulvinar. Eleifend
+                    quam adipiscing vitae proin sagittis nisl rhoncus. Diam ut
+                    venenatis tellus in metus vulputate. Lorem ipsum dolor sit
+                    amet consectetur adipiscing elit pellentesque. Venenatis
+                    lectus magna fringilla urna. In nisl nisi scelerisque eu
+                    ultrices. Velit egestas dui id ornare arcu odio ut sem
+                    nulla. Quam id leo in vitae. Egestas congue quisque egestas
+                    diam in arcu cursus euismod quis. Porttitor leo a diam
+                    sollicitudin tempor id eu nisl.
+                </p>
+            </div>
+
+            <!-- This is an example of how you can use the references component to create references -->
+            <div id="references" class="references">
+                <sl-divider></sl-divider>
+                <h2>References</h2>
+                <ul>
+                    <li>
+                        Brody, J. E. (2007, December 11). Mental reserves keep
+                        brain agile. The New York Times. Retrieved from
+                        http://www.dowjones.com/factiva/
+                    </li>
+                    <li>
+                        Chamberlin, J., Novotney, A., Packard, E., & Price, M.
+                        (2008, May). Enhancing worker well-being: Occupational
+                        health psychologists convene to share their research on
+                        work, stress, and health. Monitor on Psychology, 39(5),
+                        26-29.
+                    </li>
+                    <li>
+                        Jones, T. J., & Fields, N. (2003). Emotional quotient
+                        and personality. E-Journal of Applied Psychology, 2(2),
+                        38-45. Retrieved from
+                        http://ejournalappliedpsyc/index.php/ejap
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- This is the code to display the scroll to top button for ergonomic -->
+        <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+        <!-- but it might reduce the user experience. -->
+        <sl-button
+            class="scroll-to-top"
+            variant="primary"
+            size="medium"
+            circle
+            onclick="scrollToTop()">
+            <sl-icon name="arrow-up" label="Settings"></sl-icon>
+        </sl-button>
+
+        <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+        <script
+            type="module"
+            src="./components/table-component/table-component.js"></script>
+    </body>
 </html>
