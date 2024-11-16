@@ -6,8 +6,18 @@ new gridjs.Grid({
     data: [
         ["1", "Mold preparation: The mold should be compatible with the curing temperature which can go as high as 180 ℃. The surface of the mold should be clean and smooth"],
         ["2", "Lay-up: The prepreg sheets are cut to the desired shapes and sizes according to the mold. These prepreg layers are placed on the mold and meet the desired orientation and sequence. During each layer placement, gentle pressure is applied to remove any trapped air bubbles."],
-        ["3", "Vacuum Bagging: After prepreg sheets are laid up on the mold, auxiliary vacuum bagging materials like release film and breather fabric are placed on top of the prepreg lay-up. Then vacuum bagging film is used to create a vacuum bag and enclose the assembly in a sealed environment."],
-        ["4", "Applying vacuum: The vacuum bag is connected to the vacuum tube and the air inside the bag is removed. The pressure difference between the inside and outside of the bag causes it to compress tightly around the prepreg lay-up. This ensures the prepreg lay-up is compact and consolidated."],
+        ["3", 
+          gridjs.html(`
+            <div style="background-color: lightblue;">
+              <p>Vacuum Bagging: After prepreg sheets are laid up on the mold, auxiliary vacuum bagging materials like release film and breather fabric are placed on top of the prepreg lay-up. Then vacuum bagging film is used to create a vacuum bag and enclose the assembly in a sealed environment.</p>
+            </div>
+          `)],
+        ["4", 
+          gridjs.html(`
+            <div style="background-color: lightblue;">
+              <p>Applying vacuum: The vacuum bag is connected to the vacuum tube and the air inside the bag is removed. The pressure difference between the inside and outside of the bag causes it to compress tightly around the prepreg lay-up. This ensures the prepreg lay-up is compact and consolidated.</p>
+            </div>
+          `)],
         ["5", "Curing: The vacuum sealed prepreg assembly is placed inside a high temperature autoclave (or an oven). This fully cures the resin, bonding the fiber layers together."],
         ["6", "Demolding: When the curing is complete, the vacuum bag and the auxiliary materials are removed. Then the composite part is carefully removed from the mold."],
     ],
