@@ -1,6 +1,6 @@
 new gridjs.Grid({
     columns: [ 
-      { name: "Steps", width: '100px', formatter: (cell) => gridjs.html(`<div style="text-align: center;">${cell}</div>`) },
+      { name: "Steps", width: '60px', formatter: (cell) => gridjs.html(`<div style="text-align: center;">${cell}</div>`) },
       { name: "Description", width: '400px' }
     ],
     data: [
