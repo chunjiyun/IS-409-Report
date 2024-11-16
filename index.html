@@ -168,7 +168,22 @@
                     </sl-tree-item>
 
                     <sl-tree-item>
-                        <a href="#references">References</a>
+                        <a href="#references">10. References</a>
+                    </sl-tree-item>
+
+                    <sl-tree-item expanded>
+                        <a href="#appendix">11. Appendix</a>
+                        <sl-tree-item>
+                            <a href="#appendix-sub-1"
+                                >Appendix A: Data Cleaning Procedure</a
+                            >
+                        </sl-tree-item>
+                        <sl-tree-item>
+                            <a href="#appendix-sub-2"
+                                >Appendix B: Scatter Plot of 0.2mm, 0.5mm, 1mm
+                                and 2mm With Cleaned Data</a
+                            >
+                        </sl-tree-item>
                     </sl-tree-item>
                 </sl-tree>
             </div>
@@ -199,6 +214,7 @@
                         tag="image"
                         source="assets/composite-material.png"
                         subtitle="Figure 1: Visual aid for explaining composite materials"></image-component>
+                    <br />
                 </div>
 
                 <div id="sub-section-1-header-2">
@@ -244,7 +260,7 @@
                         source="assets/front-wing-fsae.png"
                         subtitle="Figure 3: Front wing made out of carbon fiber by NUS FSAE"></image-component>
                 </div>
-
+                <br />
                 <div id="sub-section-1-header-3">
                     <h3>
                         1.3 Three Major Methods for In-House Carbon Fiber Lay-Up
@@ -525,9 +541,8 @@
                         in-house composite manufacturing.
                         <br />
                         <br />
-                        In Singapore, there are two global distributors,
-                        <strong>RS Components</strong> and
-                        <strong>Misumi</strong>, that provide industrial and
+                        In Singapore, there are two global distributors, RS
+                        Components and Misumi, that provide industrial and
                         electronic products. Figure 12 shows the three kinds of
                         silicone silicone sheets provided by RS Components. The
                         price of each silicone sheet is at least S$110.06 and
@@ -629,7 +644,6 @@
                     loading.
                 </p>
             </div>
-
             <div id="sub-section-8-header-1">
                 <h3>8.1. Experiment Objective</h3>
                 <p>
@@ -639,7 +653,7 @@
                     material thickness.
                 </p>
             </div>
-
+            <br />
             <div id="sub-section-8-header-2">
                 <h3>8.2. Experiment Hypothesis</h3>
                 <p>
@@ -665,7 +679,7 @@
                     tensile forces.
                 </p>
             </div>
-
+            <br />
             <div id="sub-section-8-header-3">
                 <h3>8.3. Experiment Preparation</h3>
                 <p>
@@ -718,7 +732,7 @@
                     source="assets/silicone-specimen.png"
                     subtitle="Figure 16: Silicone specimens"></image-component>
             </div>
-
+            <br />
             <div id="sub-section-8-header-4">
                 <h3>8.4. Experiment Procedure</h3>
                 <p>
@@ -737,73 +751,32 @@
                     silicone specimen was elongated until breakage occurred to
                     determine the material's ultimate elongation and tensile
                     strength. See Figure 17 for a video footage of the testing
-                    for one of the specimens. Figure 17: Video footage of a
-                    silicone specimen elongating until break
+                    for one of the specimens.
                 </p>
+                <video-component
+                    tag="elongation"
+                    source="assets/elongation.mp4"
+                    subtitle="Figure 17: Video footage of a silicone specimen elongating until break"></video-component>
             </div>
-
+            <br />
             <div id="sub-section-8-header-5">
                 <h3>8.5. Experiment Results and Analysis</h3>
                 <p>
                     During the experiment, the testing machine collected
                     multiple displacement readings for the same force value,
                     resulting in a one-to-many relationship between force and
-                    displacement data points. For example, at a force of 0.001
-                    kN, several displacement measurements were recorded. When
-                    plotted, this data produced a graph (see Figure X) that made
-                    it difficult to determine the elongation at specific force
-                    levels.
+                    displacement data points. Therefore, data cleaning was
+                    performed to establish a one-to-one mapping between force
+                    and displacement. See Appendix A for the data cleaning
+                    method.
                     <br />
                     <br />
-                    To resolve this issue, data cleaning was performed to
-                    establish a one-to-one mapping between force and
-                    displacement. The following steps were taken:
-                    <br />
-                    <br />
-                    1. <ins>Identify the Failure Point</ins>: The point at which
-                    each specimen failed was identified in the dataset.
-                    <br />
-                    <br />
-                    2. <ins>Sort Force Data</ins>: Force values were sorted in
-                    ascending order from 0 N up to the failure point for each
-                    specimen.
-                    <br />
-                    <br />
-                    3. <ins>Generate New Force Dataset</ins>: A new set of force
-                    values was created, starting from 0 N with increments of
-                    0.0001 kN.
-                    <br />
-                    <br />
-                    4. <ins>Average Displacement Values</ins>: For each force
-                    value in the new dataset, the average displacement was
-                    calculated from the multiple displacement readings
-                    corresponding to that force. This ensured a one-to-one
-                    correspondence between force and displacement.
-                    <br />
-                    <br />
-                    5. <ins>Use Raw Data Beyond Failure Point</ins>: From the
-                    failure point onwards, the raw force and displacement data
-                    were retained without modification.
-                    <br />
-                    <br />
-                    6. <ins>Create Scatter Plot</ins>: A scatter plot was
-                    generated using the cleaned force and displacement data,
-                    resulting in a clearer representation of the material's
-                    behavior (see Figure X).
-                    <br />
-                    <br />
-                    This data cleaning process was repeated for specimens with
-                    thicknesses of 0.2 mm, 0.5 mm, 1 mm, and 2 mm to ensure
-                    consistency and accuracy across all tests.
-                    <br />
-                    <br />
-                    Figure 18 and 19 shows the compiled scatter plot The
-                    experiment showed that 0.5mm thickness elongates the most
-                    with the least force required to stretch to that point. This
-                    can be seen by the orange line that stretches the furthest
-                    in Figure 18. 2mm (purple) and 1.5mm both broke at similar
-                    elongation. However, 2mm needed (green) needed the greatest
-                    force to elongate.
+                    Figure 18 shows the compiled scatter plot of all specimens.
+                    The graph shows that 0.5mm thickness elongates the most with
+                    the least force required to stretch to that point. This can
+                    be seen by the orange line that stretches the furthest. 2mm
+                    (purple) and 1.5mm both broke at similar elongation.
+                    However, 2mm (green) needed the greatest force to elongate
                     <br />
                     <br />
                     Figure 18 shows a clear trend where thicker specimens
@@ -814,6 +787,18 @@
                     reach higher displacements at much lower forces, indicating
                     greater flexibility but lower strength compared to thicker
                     specimens.
+                    <br />
+                    <br />
+                    Three 0.2mm specimens slipped off from the machine grip
+                    hence they are not included in the graph.
+                </p>
+                <image-component
+                    tag="image"
+                    source="assets/specimen-displacement.png"
+                    subtitle="Figure 18: Combined scatter plot for all specimens showing elongation at break (mm) and tensile strength (kN)"></image-component>
+                <p>
+                    See Appendix B for the individual scatter plot for each
+                    thickness.
                     <br />
                     <br />
                     According to Figure 19, 0.5 mm specimen has the highest
@@ -828,23 +813,11 @@
                     percentages (760% and 716%, respectively) but can withstand
                     higher forces (0.0324 kN and 0.06055 kN, respectively),
                     indicating greater strength than 0.2mm.
-                    <br />
-                    <br />
-                    Three 0.2mm specimens slipped off from the machine grip
-                    hence they are not included in the graph.
-                    <br />
-                    <br />
-                    See Appendix A for the scatter plot divided by thickness.
-                    <image-component
-                        tag="image"
-                        source="assets/specimen-displacement.png"
-                        subtitle="Figure 18: Combined scatter plot for all specimens showing elongation at break (mm) and tensile strength (kN)"></image-component>
-                        <p></p>
-                    <table-component
-                        subtitle="Figure 19: Average elongation at break and tensile strength for four thickness">
-                        <div id="table-4"></div>
-                    </table-component>
                 </p>
+                <table-component
+                    subtitle="Figure 19: Average elongation at break and tensile strength for four thickness">
+                    <div id="table-4"></div>
+                </table-component>
             </div>
 
             <br />
@@ -853,34 +826,208 @@
 
             <div id="section-header-9">
                 <h2>9. Future Work</h2>
-                <p>To be filled.</p>
+                <p>
+                    1. Additional Testing for 0.2 mm Silicone:
+                    <br />
+                    Conduct further tests to find out the behavior of 0.2 mm
+                    silicone as three specimens slipped off and didn’t provide
+                    any data.
+                    <br />
+                    <br />
+                    2. Study of Maximum Force at Break Values
+                    <br />
+                    Use the maximum force at break for all silicone thicknesses
+                    to understand the load-bearing limitations of the material.
+                    Such data will be instrumental in determining the
+                    feasibility of using silicone in complex molds where
+                    specific features like draft angles and size may impose
+                    additional stress during demolding. This could help optimize
+                    mold designs to match the material’s capabilities.
+                    <br />
+                    <br />
+                    3. Composite Prototype Using Silicone for Vacuum Bagging
+                    <br />
+                    Develop a composite prototype by integrating silicone with a
+                    vacuum bagging process. Additionally, the appropriate shape
+                    and size that could simulate potential real-world
+                    applications should be decided which could be one of NUS
+                    FSAE composite parts.
+                    <br />
+                    <br />
+                    4. Design and Integration of a Supporting Frame
+                    <br />
+                    Create a frame system to support and integrate the silicone
+                    material into an assembly. This should include the design of
+                    a robust yet user-friendly mechanism, such as a one-touch
+                    clamping system, to simplify attachment and detachment.
+                </p>
             </div>
 
             <!-- This is an example of how you can use the references component to create references -->
             <div id="references" class="references">
                 <sl-divider></sl-divider>
                 <h2>References</h2>
-                <p>To be filled.</p>
                 <ul>
                     <li>
-                        Brody, J. E. (2007, December 11). Mental reserves keep
-                        brain agile. The New York Times. Retrieved from
-                        http://www.dowjones.com/factiva/
+                        “23 for “Silicone Sheet Translucent” | RS.”
+                        Rs-Online.com, 2015,
+                        sg.rs-online.com/web/c/?searchTerm=silicone+sheet+translucent.
+                        Accessed 15 Nov. 2024.
                     </li>
                     <li>
-                        Chamberlin, J., Novotney, A., Packard, E., & Price, M.
-                        (2008, May). Enhancing worker well-being: Occupational
-                        health psychologists convene to share their research on
-                        work, stress, and health. Monitor on Psychology, 39(5),
-                        26-29.
+                        Addcomposites. “What Is Automated Fibre Placement
+                        (AFP)?” Addcomposites, 7 Mar. 2021,
+                        www.addcomposites.com/post/what-is-automated-fibre-placement-afp.
                     </li>
                     <li>
-                        Jones, T. J., & Fields, N. (2003). Emotional quotient
-                        and personality. E-Journal of Applied Psychology, 2(2),
-                        38-45. Retrieved from
-                        http://ejournalappliedpsyc/index.php/ejap
+                        Characteristic Properties of Silicone Rubber Compounds.
+                        2020. cjohnson. “Closed Molding Advantages for Part
+                        Production - Magnum Venus Products.” Magnum Venus
+                        Products, Feb. 2019,
+                        www.mvpind.com/closed-molding-production-advantages/.
+                        Accessed 15 Nov. 2024.
+                    </li>
+                    <li>
+                        Complete Spectrum. “Composites One LLC.” Composites One,
+                        7 Dec. 2021,
+                        www.compositesone.com/prepregs-offer-many-benefits-to-many-industries/.
+                        Accessed 15 Nov. 2024.
+                    </li>
+                    <li>
+                        “Introduction to Out-of-Autoclave Prepreg Carbon Fibre -
+                        Easy Composites.” Www.easycomposites.co.uk,
+                        www.easycomposites.co.uk/learning/introduction-to-out-of-autoclave-prepreg-carbon-fibre.
+                    </li>
+                    <li>
+                        “Introduction to Vacuum Bagging.” Explore Composites!,
+                        11 Sept. 2019,
+                        explorecomposites.com/articles/lamination/basics-vacuum-bagging/.
+                    </li>
+                    <li>
+                        Melito, Steve. “Material Properties for Rubber
+                        Compounds.” Elasto Proxy, 11 Dec. 2023,
+                        www.elastoproxy.com/material-properties-rubber-compounds/.
+                    </li>
+                    <li>
+                        “NUS Formula SAE.” NUS Formula SAE, 2024,
+                        www.nusformulasae.com/. Accessed 15 Nov. 2024.
+                    </li>
+                    <li>
+                        “Open Molding.” Addcomposites.com, 2024,
+                        www.addcomposites.com/post/open-molding. Accessed 15
+                        Nov. 2024.
+                    </li>
+                    <li>
+                        “What Are Aerospace Composites?” Www.darkaero.com, Sept.
+                        2023,
+                        www.darkaero.com/knowledge/composites/what-is-a-composite/.
+                    </li>
+                    <li>
+                        “The Definitive Guide to ASTM D412 Tensile Testing of
+                        Elastomers.” Instron.com, 2024,
+                        www.instron.com/en/testing-solutions/astm-standards/astm-d412.
                     </li>
                 </ul>
+            </div>
+
+            <div id="appendix">
+                <sl-divider></sl-divider>
+                <h2>Appendix</h2>
+                <div id="appendix-sub-1">
+                    <h3>Appendix A: Data Cleaning Procedure</h3>
+                    <p>
+                        During the experiment, the testing machine collected
+                        multiple displacement readings for the same force value,
+                        resulting in a one-to-many relationship between force
+                        and displacement data points. For example, at a force of
+                        0.001 kN, several displacement measurements were
+                        recorded. When plotted, this data produced a graph (see
+                        Figure 20) that made it difficult to determine the
+                        elongation at specific force levels.
+                    </p>
+                    <image-component
+                        tag="image"
+                        source="assets/appendix-a.png"
+                        subtitle="Figure 20: Scatter plot for 0.2mm before data cleaning"></image-component>
+                    <p>
+                        To resolve this issue, data cleaning was performed to
+                        establish a one-to-one mapping between force and
+                        displacement. The following steps were taken:
+                        <br />
+                        <br />
+                        1. <ins>Identify the Failure Point</ins>: The point at
+                        which each specimen failed was identified in the
+                        dataset.
+                        <br />
+                        <br />
+                        2. <ins>Sort Force Data</ins>: Force values were sorted
+                        in ascending order from 0 N up to the failure point for
+                        each specimen.
+                        <br />
+                        <br />
+                        3. <ins>Generate New Force Dataset</ins>: A new set of
+                        force values was created, starting from 0 N with
+                        increments of 0.0001 kN.
+                        <br />
+                        <br />
+                        4. <ins>Average Displacement Values</ins>: For each
+                        force value in the new dataset, the average displacement
+                        was calculated from the multiple displacement readings
+                        corresponding to that force. This ensured a one-to-one
+                        correspondence between force and displacement.
+                        <br />
+                        <br />
+                        5. <ins>Use Raw Data Beyond Failure Point</ins>: From
+                        the failure point onwards, the raw force and
+                        displacement data were retained without modification.
+                        <br />
+                        <br />
+                        6. <ins>Create Scatter Plot</ins>: A scatter plot was
+                        generated using the cleaned force and displacement data,
+                        resulting in a clearer representation of the material's
+                        behavior (see Figure X).
+                        <br />
+                        <br />
+                        This data cleaning process was repeated for specimens
+                        with thicknesses of 0.2 mm, 0.5 mm, 1 mm, and 2 mm to
+                        ensure consistency and accuracy across all tests.
+                    </p>
+                </div>
+            </div>
+            <div id="appendix-sub-2">
+                <h3>
+                    Appendix B: Scatter Plot of 0.2mm, 0.5mm, 1mm and 2mm With
+                    Cleaned Data
+                </h3>
+                <p>
+                    During the experiment, the testing machine collected
+                    multiple displacement readings for the same force value,
+                    resulting in a one-to-many relationship between force and
+                    displacement data points. For example, at a force of 0.001
+                    kN, several displacement measurements were recorded. When
+                    plotted, this data produced a graph (see Figure 20) that
+                    made it difficult to determine the elongation at specific
+                    force levels.
+                </p>
+                <image-component
+                    tag="image"
+                    source="assets/appendix-b-1.png"
+                    subtitle="Figure 21: Scatter plot of cleaned data of 0.2mm silicone "></image-component>
+                <br />
+                <image-component
+                    tag="image"
+                    source="assets/appendix-b-2.png"
+                    subtitle="Figure 22: Scatter plot of cleaned data of 0.5mm silicone "></image-component>
+                <br />
+                <image-component
+                    tag="image"
+                    source="assets/appendix-b-3.png"
+                    subtitle="Figure 23: Scatter plot of cleaned data of 1.0mm silicone "></image-component>
+                <br />
+                <image-component
+                    tag="image"
+                    source="assets/appendix-b-4.png"
+                    subtitle="Figure 24: Scatter plot of cleaned data of 2.0mm silicone "></image-component>
             </div>
         </div>
 

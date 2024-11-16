@@ -43,7 +43,7 @@ new gridjs.Grid({
           <img src="assets/sealant-tape.png" alt="Bagging Film" style="width:200px; height:200px;">
         </div>
       `)],
-      ["Price Per Roll (SGD)", "$1592", "5.47"],
+      ["Price Per Roll (SGD)", "$1592", "$5.47"],
       ["Dimensions", gridjs.html(`
         <div>
           <p>Length: 304m<br/>Width: 1.22m<br/>Thickness: 0.0508mm</p>
